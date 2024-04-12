@@ -84,7 +84,7 @@ func compileContentMatch(typ *NodeType, schema Schema, contentExprCache map[stri
 		return fmt.Errorf("error parsing content for node %q: %w", typ, err)
 	}
 
-	ce := dfa(nfa(cm, schema.Nodes))
+	ce := dfa(nfa(cm))
 
 	contentExprCache[typ.Spec.Content] = *ce
 	typ.ContentMatch = *ce

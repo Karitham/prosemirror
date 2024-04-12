@@ -351,7 +351,7 @@ const (
 	rangeExpr  = "range"
 )
 
-func nfa(expr Expr, types map[NodeTypeName]NodeType) [][]Edge {
+func nfa(expr Expr) [][]Edge {
 	var nfa [][]Edge
 
 	nfa = append(nfa, []Edge{})
